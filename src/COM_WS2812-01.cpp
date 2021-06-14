@@ -6,7 +6,7 @@
 // ### Version			: 1.01													###
 // ### Datum			: 14.06.2021											###
 // ###                                                                          ###
-// ### Änderung			: keine													###
+// ### Änderung			: überarbeitet, VSCode, GitHub							###
 // ###																			###
 // ### Hardware			: Arduino Nano											###
 // ###					: Leiterplatte 17-0023-02 und 17-0027-02				###
