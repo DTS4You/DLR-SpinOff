@@ -220,6 +220,7 @@ void cmd_led_all_def()
 	led_set_range( 2, 0, 20, F_LED_def);
 	led_set_range( 3, 0, 20, F_LED_def);
 	ddb_refresh = true;
+	Serial.println("ack");
 }
 
 // Command -> cmd_led_all_off
@@ -230,6 +231,7 @@ void cmd_led_all_off()
 	led_set_range( 2, 0, 20, F_LED_off);
 	led_set_range( 3, 0, 20, F_LED_off);
 	ddb_refresh = true;
+	Serial.println("ack");
 }
 
 // This gets set as the default handler, and gets called when no other command matches.
