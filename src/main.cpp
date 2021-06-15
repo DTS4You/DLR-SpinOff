@@ -46,16 +46,16 @@ SerialCommand sCmd;					// The demo SerialCommand object
 
 // Command -> LED_on
 void LED_on() {
-	Serial.println("LED EIN");
-	led_set_range(0, 0, 10, 3);
+		led_set_range(0, 0, 10, 3);
 	ddb_refresh = true;
+	Serial.println("LED_EIN");
 }
 
 // Command -> LED_off
 void LED_off() {
-	Serial.println("LED AUS");
-	led_set_range(0, 0, 10, 5);
+		led_set_range(0, 0, 10, 5);
 	ddb_refresh = true;
+	Serial.println("LED_AUS");
 }
 
 // Command -> sayHello
@@ -210,6 +210,7 @@ void cmd_led_range() {
 	
 	led_set_range(ddb, start, stop, color);
 	ddb_refresh = true;
+	Serial.println("ack");
 }
 
 // Command -> cmd_led_all_def
