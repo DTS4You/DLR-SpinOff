@@ -273,7 +273,7 @@ void setup() {
 		delay(ddb_init_delay);
 	}
 	
-
+	Serial.println("init ok")
 	// Timer definieren und starten
 	refresh_task.setTimeout(Refresh_Time);
 	refresh_task.restart();
