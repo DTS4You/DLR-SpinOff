@@ -43,6 +43,8 @@ SerialCommand sCmd;					// The demo SerialCommand object
 // ----------------------------------------------------------------------------
 // --- Funktionsblöcke von SerialCommand
 //-----------------------------------------------------------------------------
+
+// Command -> LED_on
 void LED_on() {
 	Serial.println("LED EIN");
 	led_set_range(0, 0, 10, 3);
