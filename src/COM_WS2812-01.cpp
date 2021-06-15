@@ -67,6 +67,7 @@ void sayHello() {
   	}
 }
 
+// Command -> processCommand
 void processCommand() {
 	int aNumber;
 	char *arg;
@@ -93,6 +94,7 @@ void processCommand() {
   	}
 }
 
+// Command -> setCommand
 void setCommand() {
 	int aNumber;
 	uint8_t rgb[3];
