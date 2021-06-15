@@ -43,18 +43,22 @@ SerialCommand sCmd;					// The demo SerialCommand object
 // ----------------------------------------------------------------------------
 // --- Funktionsblöcke von SerialCommand
 //-----------------------------------------------------------------------------
+
+// Command -> LED_on
 void LED_on() {
 	Serial.println("LED EIN");
 	led_set_range(0, 0, 10, 3);
 	ddb_refresh = true;
 }
 
+// Command -> LED_off
 void LED_off() {
 	Serial.println("LED AUS");
 	led_set_range(0, 0, 10, 5);
 	ddb_refresh = true;
 }
 
+// Command -> sayHello
 void sayHello() {
 	char *arg;
 	arg = sCmd.next();    // Get the next argument from the SerialCommand object buffer
@@ -140,6 +144,7 @@ void setCommand() {
 	
 }
 
+// Command -> cmd_led_range
 void cmd_led_range() {
 	int aNumber;
 	uint8_t ddb;
@@ -207,6 +212,7 @@ void cmd_led_range() {
 	ddb_refresh = true;
 }
 
+// Command -> cmd_led_all_def
 void cmd_led_all_def()
 {
 	led_set_range( 0, 0, 20, F_LED_def);
@@ -216,6 +222,7 @@ void cmd_led_all_def()
 	ddb_refresh = true;
 }
 
+// Command -> cmd_led_all_off
 void cmd_led_all_off()
 {
 	led_set_range( 0, 0, 20, F_LED_off);
