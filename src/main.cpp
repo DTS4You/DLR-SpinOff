@@ -276,7 +276,6 @@ void setup() {
 		delay(ddb_init_delay);
 	}
 	
-	Serial.println("init ok");
 	// Timer definieren und starten
 	refresh_task.setTimeout(Refresh_Time);
 	refresh_task.restart();
@@ -284,6 +283,7 @@ void setup() {
 	//-------------------------------------------------------------------------
 	// Grundeinstellungen LED Stripes
 	//-------------------------------------------------------------------------
+	// LED-Stripe 1 bis 4 auf Grundfarbe/Helligkeit
 	led_set_range( 0, 0, 20, F_LED_def);
 	led_stripe[0].show();
 	led_set_range( 1, 0, 20, F_LED_def);
@@ -292,9 +292,17 @@ void setup() {
 	led_stripe[2].show();
 	led_set_range( 3, 0, 20, F_LED_def);
 	led_stripe[3].show();
+	//-------------------------------------------------------------------------
+	// Sonderfunktion 5. Stripe !!!
 	led_set_range( 4, 0, 20, F_LED_magenta);
 	led_stripe[4].show();
+	//-------------------------------------------------------------------------
 
+
+	//-------------------------------------------------------------------------
+	// Sende "init ok"
+	//-------------------------------------------------------------------------
+	Serial.println("init ok");
 	//-------------------------------------------------------------------------
 }
 
