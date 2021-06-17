@@ -293,7 +293,7 @@ void setup() {
 	led_set_range( 3, 0, 20, F_LED_def);
 	led_stripe[3].show();
 	//-------------------------------------------------------------------------
-	// Sonderfunktion 5. Stripe !!!
+	// Sonderfunktion 5. Stripe !!! -> Magenta
 	led_set_range( 4, 0, 20, F_LED_magenta);
 	led_stripe[4].show();
 	//-------------------------------------------------------------------------
