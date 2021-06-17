@@ -261,6 +261,9 @@ void setup() {
 	// Send Acknowledge -> "ack" to the serial port
 	Serial.println("ack");
 	
+	//-------------------------------------------------------------------------
+	// Initalisierung der Digit-Dot-Booster
+	//-------------------------------------------------------------------------
 	for (uint8_t i = 0; i < 7; i++)
 	{
 		// Digi-Dot-Booster CS-Pin konfigurieren
