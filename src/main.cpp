@@ -59,16 +59,8 @@ void LED_off() {
 }
 
 // Command -> sayHello
-void sayHello() {
-	char *arg;
-	arg = sCmd.next();    // Get the next argument from the SerialCommand object buffer
-	if (arg != NULL) {    // As long as it existed, take it
-		Serial.print("echo ");
-    	Serial.println(arg);
-  	}
-	else {
-		Serial.println("ack");
-  	}
+void stat_version() {
+	Serial.println("Version 1.01");
 }
 
 // Command -> processCommand
@@ -251,7 +243,7 @@ void setup() {
 	// Setup callbacks for SerialCommand commands
 	sCmd.addCommand("on",		LED_on);          	// Turns LED on
 	sCmd.addCommand("off",		LED_off);         	// Turns LED off
-	sCmd.addCommand("echo",		sayHello);        	// Echos the string argument back
+	sCmd.addCommand("$ver",		stat_version);      // Send the Program-Version
 	sCmd.addCommand("P",		processCommand);  	// Converts two arguments to integers and echos them back
 	sCmd.addCommand("Set",		setCommand);		// Set Value
 	sCmd.addCommand("Led",		cmd_led_range);		// Set Range on selected ddb
